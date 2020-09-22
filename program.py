@@ -19,23 +19,27 @@ def get_bot_response(user_response):
     elif user_response == "no" or user_response == "No":
         reading = 0
         print(response2[which2])
+        return("")
     elif user_response == "done":
         reading = 0
-        print("Alexandria: Okay, nice talking to you.")
+        return("Alexandria: Okay, nice talking to you.")
     else:
         reading = 0
-        print("Alexandria: My pardon?")
+        return ("Alexandria: My pardon?")
 
     if which == 0 and reading == 1:
         book = input()
         print("Alexandria: I'll have to read " + book)
+        return("")
     elif reading == 1:
         none = input()
         print("Alexandria: Sounds interesting. I'll have to check it out.")
+        return("")
+
 read = ""
 
 while read != "done":
     print("Alexandria: Do you read?")
     read = input()
-    get_bot_response(read)
+    print(get_bot_response(read))
     print("")
