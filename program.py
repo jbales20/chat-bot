@@ -28,11 +28,12 @@ def get_bot_response(user_response):
     elif user_response == "done":
         reading = 0
         return("Alexandria: Okay, nice talking to you.")
-        
+ # Detects if the user inputs anything besides yes, no or done       
     else:
         reading = 0
         return ("Alexandria: My pardon?")
 
+# If the user answered Yes, the three possible questions asked after the user saying Yes, has two possibly responses depending on the question. 
     if which == 0 and reading == 1:
         book = input()
         print("Alexandria: I'll have to read " + book)
@@ -44,6 +45,7 @@ def get_bot_response(user_response):
 
 read = ""
 
+# The while loop that causes it to cycle over again.
 while read != "done":
     print("Alexandria: Do you read?")
     read = input()
