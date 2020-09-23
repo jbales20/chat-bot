@@ -14,6 +14,8 @@ print("")
 def get_bot_response(user_response):
     which = random.randint(0, (len(response1)-1))
     which2 = random.randint(0, (len(response2)-1))
+
+# Uses a randomize predetermined response from user for either Yes or No.
     if user_response == "yes" or user_response == "Yes":
         reading = 1
         print(response1[which])
@@ -21,9 +23,12 @@ def get_bot_response(user_response):
         reading = 0
         print(response2[which2])
         return("")
+
+# The user's escape from the loop.
     elif user_response == "done":
         reading = 0
         return("Alexandria: Okay, nice talking to you.")
+        
     else:
         reading = 0
         return ("Alexandria: My pardon?")
